@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
 
 function App() {
+  //useState(0) => [getter, setter]
+  const [total, setTotal] = useState(0)
+
+  const add = (x) => x + 1
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <h1
+      onClick={() => {
+        setTotal(add(total))
+      }}
+    >
+      {total}
+    </h1>
+  )
 }
 
-export default App;
+export default App
