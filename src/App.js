@@ -1,4 +1,4 @@
-import Parent from './ex-0712-1/Parent'
+import Parent from './ex-0712-2/Parent'
 
 function App(props) {
   return <Parent />

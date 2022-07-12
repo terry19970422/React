@@ -11,6 +11,7 @@ function Parent() {
           alert('hello')
         }}
       />
+      <Child />
     </>
   )
 }
