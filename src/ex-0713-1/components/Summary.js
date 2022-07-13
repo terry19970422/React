@@ -1,7 +1,5 @@
 function Summary(props) {
-
-  const {totalNumber, totalPrice} = props
-
+  const { totalNumber, totalPrice } = props
 
   return (
     <>
