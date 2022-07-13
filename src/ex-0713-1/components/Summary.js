@@ -1,4 +1,8 @@
 function Summary(props) {
+
+  const {totalNumber, totalPrice} = props
+
+
   return (
     <>
       <div className="col-md-4 summary">
@@ -9,11 +13,11 @@ function Summary(props) {
         </div>
         <hr />
         <div className="row">
-          <div className="col col-style">共 3 項目</div>
+          <div className="col col-style">共 {totalNumber} 項目</div>
         </div>
         <div className="row row-style">
           <div className="col">總價</div>
-          <div className="col text-right">$137.00</div>
+          <div className="col text-right">${totalPrice}</div>
         </div>
         <button className="btn">前往付款</button>
       </div>
