@@ -1,4 +1,4 @@
-import Controlled from './ex-0713-2/Controlled'
+import Controlled from './ex-0714-1/Controlled'
 
 function App() {
   return (
