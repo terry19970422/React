@@ -12,6 +12,13 @@ function Controlled() {
   const [car, setCar] = useState('')
   const carOptions = ['Benz', 'BMW', 'Toyota']
 
+  // checkbox -single
+  const [agree, setAgree] = useState(false)
+
+  // checkbox -group
+  const [likeList, setLikeList] = useState([])
+  const fruitOptions = ['西瓜', '芒果', '蘋果']
+
   return (
     <>
       <section id="inputText">
@@ -68,6 +75,46 @@ function Controlled() {
             )
           })}
         </select>
+      </section>
+      <section id="checkbox-single">
+        <h1>核取方塊(單一)</h1>
+        <input
+          type="checkbox"
+          checked={agree}
+          onChange={(e) => {
+            setAgree(e.target.checked)
+          }}
+        />
+        <label>我同意會員註冊條款</label>
+      </section>
+      <section id="checkbox-group">
+        <h1>核取方塊(群組)</h1>
+        {fruitOptions.map((v, i) => {
+          return (
+            <div key={i}>
+              <input
+                type="checkbox"
+                checked={likeList.includes(v)}
+                value={v}
+                onChange={(e) => {
+                  //先判斷是否有在likeList狀態陣列中
+                  if (likeList.includes(e.target.value)) {
+                    // if有 -> 移出陣列
+                    const newLikeList = likeList.filter((v, i) => {
+                      return v !== e.target.value
+                    })
+                    setLikeList(newLikeList)
+                  } else {
+                    // else -> 加入陣列
+                    const newLikeList = [...likeList, e.target.value]
+                    setLikeList(newLikeList)
+                  }
+                }}
+              />
+              <label>{v}</label>
+            </div>
+          )
+        })}
       </section>
     </>
   )

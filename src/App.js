@@ -1,9 +1,9 @@
-import Controlled from './ex-0714-1/Controlled'
+import BirthSelect from './ex-0714-2/BirthSelect'
 
 function App() {
   return (
     <>
-      <Controlled />
+      <BirthSelect />
     </>
   )
 }
