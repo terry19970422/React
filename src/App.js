@@ -1,9 +1,9 @@
-import BirthSelect from './ex-0714-2/BirthSelect'
+import TWZipcode from './ex-0715-1/TWZipcode'
 
 function App() {
   return (
     <>
-      <BirthSelect />
+      <TWZipcode />
     </>
   )
 }
