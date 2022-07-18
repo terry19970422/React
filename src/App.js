@@ -1,9 +1,11 @@
-import RefsForm from './ex-0715-6/RefsForm'
+import CC from './ex-0718-1/CC'
+import FC from './ex-0718-1/FC'
 
 function App() {
   return (
     <>
-      <RefsForm />
+      <CC />
+      <FC />
     </>
   )
 }
