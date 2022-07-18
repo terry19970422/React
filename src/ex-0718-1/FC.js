@@ -25,6 +25,26 @@ function FC(props) {
     }
   }, [total]) // 相依陣列裡填入會觸發updating階段的state或props
 
+  //  模擬willUnmount
+  useEffect(() => {
+    return () => {
+      // 模擬willUnmount
+      console.log('FC - 模擬componentWillUnmount')
+    }
+  }, [])
+
+  // 成對的訂閱與取消訂閱的模式
+  useEffect(() => {
+    document.getElementById('test').addEventListener('click', function () {
+      alert('hello')
+    })
+
+    return () => {
+      // 模擬willUnmount
+      document.getElementById('test').removeEventListener('click')
+    }
+  }, [])
+
   return (
     <>
       {console.log('FC - render')}

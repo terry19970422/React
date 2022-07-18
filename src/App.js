@@ -1,9 +1,9 @@
-import Parent from './ex-0718-1/Parent'
+import User from './ex-0718-2/User'
 
 function App() {
   return (
     <>
-      <Parent />
+      <User />
       {/* <FC /> */}
     </>
   )

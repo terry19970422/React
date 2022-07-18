@@ -16,7 +16,7 @@ class CC extends Component {
     console.log('CC - componentDidUpdate', 'total =', this.state.total)
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     console.log('CC - componentWillUnmount')
   }
 

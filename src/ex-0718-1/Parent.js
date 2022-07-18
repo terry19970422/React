@@ -1,16 +1,17 @@
-import CC from './CC'
+//import CC from './CC'
 import FC from './FC'
 
 import { useState } from 'react'
 
 function Parent() {
-  const [isShow, setShow] = useState(true)
+  const [isShow, setIsShow] = useState(true)
+
   return (
     <>
-      {isShow && <CC />}
+      {isShow && <FC />}
       <button
         onClick={() => {
-          setShow(!isShow)
+          setIsShow(!isShow)
         }}
       >
         {isShow ? '移除' : '呈現'}
