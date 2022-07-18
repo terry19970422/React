@@ -4,9 +4,15 @@ class CC extends Component {
   constructor() {
     super()
     this.state = { total: 0 }
+    console.log('constructor')
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount')
   }
 
   render() {
+    console.log('render')
     return (
       <>
         <h1>CC</h1>
